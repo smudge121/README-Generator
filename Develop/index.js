@@ -62,7 +62,8 @@ function init() {
     inquirer.prompt(questions).then(data => {
         console.log(data);
         fs.writeFile('README.md',generate({...data}), err => {
-            console.log(err);
+            if (!null) console.log(err);
+            else console.log("Generating ReadMe!");
         })
     })
 }
