@@ -18,7 +18,8 @@ const questions = [
     {
         type: 'input',
         name: 'install',
-        message: "What are your project's installation instructions?"
+        message: "What command needs to be run in the terminal to install requirements?",
+        default: 'npm i -y'
     },
     {
         type: 'input',
@@ -39,7 +40,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: "Which license does your project use?",
-        choices: generate.licenses
+        choices: ['Apache', 'GNU GPL v3.00','MIT','Boost','BSD 2-clause','BSD 3-clause','None']
     },
     {
         type: 'input',
@@ -59,7 +60,7 @@ function writeToFile(fileName, data) {}
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then(data => {
-
+        fs.writeFile('README.md',generate(data))
     })
 }
 

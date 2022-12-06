@@ -14,7 +14,8 @@ test description
 
 ## Installation
 
-Installation Instructions
+Before running the program, navigate to its directory in the terminal and run the following command:
+    command
 
 ## Usage
 Usage Instructions
@@ -25,5 +26,8 @@ Contributing
 ## Tests
 test
 ## Questions
-My GitHub: url
-Contact: email
+If you have any questions, you can contact me here:
+* email
+
+More of my work can be viewed here:
+* https://github.com/USRNAME

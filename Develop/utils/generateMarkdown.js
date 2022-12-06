@@ -11,7 +11,14 @@ const licenseImgs = [
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  for (var i = 0; i < licenses.length; i++){
+    if (licenses[i] == license)
+    {
+      return licenseImgs[i];
+    }
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -19,11 +26,52 @@ function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license == 'None')
+  {
+    return 'No license was used on this project.'
+  }
+  else
+  {
+    return `The ${license} was used on this project.`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # PROJECT-TITLE
+  ${renderLicenseBadge(data.license)}
+  ## Description
+  ${data.desc}
+  ## Table of Contents
+  1. [Installation](#installation)
+  2. [Usage](#usage)
+  3. [License](#license)
+  4. [Contributing](#contributing)
+  5. [Tests](#tests)
+  6. [Questions](#questions)
+  
+  ## Installation
+  
+  Before running the program, navigate to its directory in the terminal and run the following command:
+      ${data.install}
+  
+  ## Usage
+  ${data.usage}
+  ## License
+  ${renderLicenseSection(data.license)}
+  ## Contributing
+  ${data.contribute}
+  ## Tests
+  ${data.testing}
+  ## Questions
+  If you have any questions, you can contact me here:
+  * ${data.email}
+  
+  More of my work can be viewed here:
+  * https://github.com/${data.github}
+  
 
 `;
 }
