@@ -20,6 +20,9 @@ To use the program, the user would then type
 
 to begin the program.  Answer the prompted questions and when finished, a README file will be created within the directory.
 
+Video demonstrating use of product:
+[Demo Video](GenerateReadmeProj.mp4)
+
 ## Credits
 
 Developed by - Jaret Ishii
