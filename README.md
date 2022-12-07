@@ -1,3 +1,25 @@
 # README Generator
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## Description
+
+This project is a terminal based application that generates professional README files based on a series of user inputs.
+
+## Installation
+
+In order to run the program, the user must download the code from the repository and then navigate to it within the terminal.  Type the command
+
+    npm init -y
+
+to Initialize all dependencies.
+
+## Usage
+
+To use the program, the user would then type
+
+    node index.js
+
+to begin the program.  Answer the prompted questions and when finished, a README file will be created within the directory.
+
+## Credits
+
+Developed by - Jaret Ishii

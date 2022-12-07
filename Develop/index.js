@@ -1,9 +1,9 @@
-//DONE    TODO: Include packages needed for this application
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generate = require('./utils/generateMarkdown');
 
-//DONE     TODO: Create an array of questions for user input
+
 const questions = [
     {
         type: 'input',
@@ -19,7 +19,7 @@ const questions = [
         type: 'input',
         name: 'install',
         message: "What command needs to be run in the terminal to install requirements?",
-        default: 'npm i -y'
+        default: 'npm init -y'
     },
     {
         type: 'input',
@@ -54,16 +54,15 @@ const questions = [
     }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
+
 function init() {
     inquirer.prompt(questions).then(data => {
-        console.log(data);
+        // console.log(data);
         fs.writeFile('README.md',generate({...data}), err => {
-            if (!null) console.log(err);
+            if (err != null) console.log(err);
             else console.log("Generating ReadMe!");
+             
         })
     })
 }
